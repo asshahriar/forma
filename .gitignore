@@ -1,2 +1,4 @@
-.next
+# next.js
+/.next/
+/out/
 node_modules
