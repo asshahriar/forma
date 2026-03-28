@@ -170,12 +170,11 @@ export function Showcase() {
         {cells.map(({ className, component }, i) => (
           <motion.div
             key={i}
-            style={{ y: i % 2 === 0 ? y1 : y2 }}
+            style={{ y: i % 2 === 0 ? y1 : y2, background: "var(bg-2)" }}
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className={`${className} p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors`}
-            style={{ background: "var(--bg-2)" }}
+            className={`${className} p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors `}
           >
             {component}
           </motion.div>
